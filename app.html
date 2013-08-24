@@ -13,13 +13,6 @@
   <link rel="stylesheet" href="style/input_areas.css">
   <link rel="stylesheet" href="style/status.css">
   <link rel="stylesheet" href="style/switches.css">
-  <link rel="stylesheet" href="style_unstable/drawer.css">
-  <link rel="stylesheet" href="style_unstable/lists.css">
-  <link rel="stylesheet" href="style_unstable/progress_activity.css">
-  <link rel="stylesheet" href="style_unstable/scrolling.css">
-  <link rel="stylesheet" href="style_unstable/seekbars.css">
-  <link rel="stylesheet" href="style_unstable/tabs.css">
-  <link rel="stylesheet" href="style_unstable/toolbars.css">
 
   <!-- Icons -->
   <link rel="stylesheet" href="icons/styles/action_icons.css">
@@ -37,6 +30,8 @@
   <!-- Additional markup to make Building Blocks kind of cross browser -->
   <link rel="stylesheet" href="cross_browser.css">
 
+  <link rel="stylesheet" href="style/app.css">
+
 </head>
 <body>
   
@@ -51,12 +46,19 @@
         <p>
           <input type="text" name="q" placeholder="I'll scrutinize the net..." required value="">
           <input type="hidden" name="no_redirect" value="1">
-          <input type="hidden" name="pretty" value="1">
+          <input type="hidden" name="pretty" value="0">
           <input type="hidden" name="format" value="json">
           <input type="hidden" name="t" value="ffos-gordon">
           <button type="reset">Clear</button>
         </p>
       </form>
+      <!-- <img src="images/gordon.jpg" id="gordon_image"> -->
+
+      <div class="search-results">
+
+      </div>
+
+      <small>powered by <a href="http://duckduckgo.com">DuckDuckGo</a></small>
     </article>
   </section>
 
