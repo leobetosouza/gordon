@@ -46,11 +46,10 @@
     </header>
     
     <article>
-      <form role="search" action="http://api.duckduckgo.com/">
+      <form role="search" action="http://api.duckduckgo.com/" id="ddg-form">
         <button type="submit">Do it!</button>
         <p>
           <input type="text" name="q" placeholder="I'll scrutinize the net..." required value="">
-          <input type="hidden" name="callback" value="ffos">
           <input type="hidden" name="no_redirect" value="1">
           <input type="hidden" name="pretty" value="1">
           <input type="hidden" name="format" value="json">
@@ -65,6 +64,9 @@
   <script type="text/javascript" defer src="js/status.js"></script>
   <script type="text/javascript" defer src="js/seekbars.js"></script>
   <script type="text/javascript" defer src="js/app.js"></script>
+
+  <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+  <script type="text/javascript" src="js/ddgapi.js"></script>
 
   <script>
     var mobile = (navigator.userAgent.search("Mobile") != -1);
