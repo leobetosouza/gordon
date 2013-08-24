@@ -2,19 +2,23 @@ jQuery(function($) {
     var resultsArea = $( '.search-results' );
 
     function processTopics( topics ) {
-        var listItem;
-
+        var resultList = $( '<ul></ul>'),
+            listItem;
 
         topics.forEach(function( topic ) {
             $( '<li></li>' )
                 .html( topic.Result )
-                .appendTo( resultsArea );
-
+                .appendTo( resultList );
         });
+
+        resultList.appendTo( resultsArea ); 
 
     }
 
-    function processDefinition( definition, source, sourceURL ) {
+    function processDefinition( definition, source, sourceURL, heading ) {
+        if ( heading ) {
+            $( '<h1></h1>' ).html( heading ).appendTo( resultsArea );
+        }
         $( '<h2></h2>' ).html( definition ).appendTo( resultsArea );
         $( '<h3></h3>' ).html( 'Source: <a href="' + sourceURL + '">' + source + '</a>' ).appendTo( resultsArea );
         $( '<hr/>' ).appendTo( resultsArea );
@@ -33,7 +37,7 @@ jQuery(function($) {
                 $( '.search-results' ).empty();
 
                 if ( data.Definition ) {
-                    processDefinition( data.Definition, data.AbstractSource, data.AbstractURL );
+                    processDefinition( data.Definition, data.AbstractSource, data.AbstractURL, data.Heading );
                 }
 
                 if ( data.Topics ) {
