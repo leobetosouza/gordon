@@ -1,4 +1,4 @@
-gordon
+Gordon
 ======
 
-The Ultimate Search Engine made by fat guys
+An search app for Firefox OS powered by DuckDuckGo.
