@@ -36,7 +36,28 @@
 
   <!-- Additional markup to make Building Blocks kind of cross browser -->
   <link rel="stylesheet" href="cross_browser.css">
+  
 
+  <style>
+    section[role="region"]{
+      overflow:scroll;
+    }
+    
+    [data-type="list"] li,
+    [data-type="list"] li > a{
+      height:auto!important;
+    }
+
+    [data-type="list"] li p,
+    [data-type="list"] li p{
+      line-height:inherit!important;
+      white-space: normal;
+    }
+    
+    [data-type="list"] aside img{
+      margin-top:1rem;
+    }
+  </style>
 </head>
 <body>
   
@@ -58,6 +79,57 @@
         </p>
       </form>
     </article>
+  
+
+    <section data-type="list">
+      <header>I found that...</header>
+      
+      <p>B.A.T.M.A.N.'s crucial point is the decentralization of the knowledge about the best route through the network - no single node has all the data.</p>
+      
+      <header>And I also found...</header>
+
+      <ul>
+        <li>
+          <a href="#">
+            <p>Batman is a National/DC comic book superhero.</p>
+          </a>
+        </li>
+        <li>
+          <aside class="pack-end">
+            <img alt="placeholder" src="https://i.duckduckgo.com/i/06b6f596.jpg">
+          </aside>
+          <a href="#">
+            <p>Batman: Arkham City, a 2011 video game developed by Rocksteady Studios</p>
+            <p>Beginning of message</p>
+          </a>
+        </li>
+      </ul>
+      <header>Another title</header>
+      <ul>
+        <li aria-disabled="true">
+          <aside class="pack-end">
+            <img alt="placeholder" src="myimage.jpg">
+          </aside>
+          <a href="#">
+            <p>Travis Gray</p>
+            <p>Disabled item</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <aside class="icon icon-callout">
+              asidecall
+            </aside>
+            <p>Travis Gray <em>(2)</em></p>
+            <p>
+              <time datetime="17:43">5:43PM</time>
+              Mobile
+            </p>
+          </a>
+        </li>
+      </ul>
+    </section>
+
   </section>
 
 
